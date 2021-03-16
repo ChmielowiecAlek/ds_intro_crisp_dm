@@ -10,3 +10,20 @@ I've been looking for a sample dataset for some time and found an interesting on
 
 I've found the topic interesting, and the original results could serve as a benchmark for assessing my work.
 
+#The CRISP-DM process
+
+> In this case, understanding business and data turned out to be interdependent for me.
+
+> This means that I needed to know the data to formulate domain-related questions.
+
+##Step 1: Business Understanding
+
+The domain of the problem is embedded in social science. The main issue concerns the perception of masculinity by men themselves.
+
+
+##Step 2: Data Understanding
+
+The original research is based on the survey results.
+I'm using the same data here, so it's worth mentioning a bit about them.
+
+
