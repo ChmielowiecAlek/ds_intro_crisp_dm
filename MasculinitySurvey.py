@@ -1,7 +1,7 @@
 import urllib.request
 import os
 import shutil
-
+import pandas
 
 class DataSource:
     __files = ['README.md', 'masculinity-survey.csv', 'masculinity-survey.pdf', 'raw-responses.csv']
@@ -26,6 +26,10 @@ class DataSource:
         data_file = DataSource.__files[3]
         return os.path.join(DataSource.__target_dir, data_file)
 
+    @staticmethod
+    def load_data_frame():
+        data_frame = pandas.read_csv(DataSource.get_data_path())
+        return data_frame
 
 class MetaData:
     # The original metadata are in pdf format. Moreover, column names are ambiguous.
