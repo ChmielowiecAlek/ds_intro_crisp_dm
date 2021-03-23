@@ -1,0 +1,38 @@
+# TODO: Just improve the README
+
+# TODO: Add licenses in README (on master branch) <https://choosealicense.com/>
+#       Download also the license file for data
+
+# TODO: Consider some unit tests
+# <https://docs.python.org/3/library/unittest.html>
+# and <https://docs.python.org/3/library/unittest.mock.html>
+# They use pytest in the course <https://docs.pytest.org/en/stable/index.html>
+
+# TODO: apply professional logs <https://docs.python.org/3/library/logging.html>
+
+# TODO: self-review the code (use questions and tips from the course)
+
+# TODO: How to check the version of the data?
+
+# TODO: Some columns are boolean/3-values, maybe they should be corrected.
+#       Raw answers should be verified against the dictionary (and vice versa).
+#       I see some in double quotes - to be checked.
+#       Handle 'Not selected' and 'NA'
+#       Apply a consistency check (SHOW IF)
+#       Oh, they removed age from the results.
+#       And not all are described in the pdf. Some of them look like repetitions...
+
+================================
+
+# DONE: rename py files: lowercase + underscore
+#  <https://pythonguides.com/python-naming-conventions/#What_should_be_my_file_name_in_python>
+
+# DONE: apply linter(s) at pre-commit hook
+#        <https://www.slant.co/topics/2692/~best-python-code-linters>
+#        <https://pylint.org/>
+#       howto: <https://kirankoduru.github.io/python/pylint-git-hooks.html>
+
+#       other options:
+#        <https://rednafi.github.io/digressions/python/2020/04/06/python-precommit.html>
+#        <https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/>
+

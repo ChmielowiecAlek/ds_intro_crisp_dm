@@ -3,13 +3,18 @@ import os
 import shutil
 import pandas
 
+
 class DataSource:
+    """ This class is responsible for downloading original data from fivethirtyeight."""
+
     __files = ['README.md', 'masculinity-survey.csv', 'masculinity-survey.pdf', 'raw-responses.csv']
     __target_dir = os.path.join('venv', 'data', 'masculinity_survey')
 
     @staticmethod
     def download_data():
-        url_base = 'https://raw.githubusercontent.com/fivethirtyeight/data/master/masculinity-survey/'
+        """Downloads data from an external repository."""
+        url_base = 'https://raw.githubusercontent.com/fivethirtyeight/'\
+                   'data/master/masculinity-survey/'
         try:
             shutil.rmtree(DataSource.__target_dir)
         except FileNotFoundError:
@@ -23,13 +28,20 @@ class DataSource:
 
     @staticmethod
     def get_data_path():
+        """Gets the location when the data file is stored.
+           Returns the path to the data file.
+        """
         data_file = DataSource.__files[3]
         return os.path.join(DataSource.__target_dir, data_file)
 
     @staticmethod
     def load_data_frame():
+        """Loads the data file.
+           Returns a pandas data frame.
+        """
         data_frame = pandas.read_csv(DataSource.get_data_path())
         return data_frame
+
 
 class MetaData:
     # The original metadata are in pdf format. Moreover, column names are ambiguous.
@@ -469,8 +481,10 @@ class MetaData:
                   ),  # q0019_0003
                   'pays_social_expectations': (
                       'Which of the following are reasons why you try to pay when on a date? '
-                      'Societal expectations, even though you don’t always think you should have to pay',
-                      ['Societal expectations, even though you don’t always think you should have to pay',
+                      'Societal expectations, even though you don’t always '
+                      'think you should have to pay',
+                      ['Societal expectations, even though you don’t always '
+                       'think you should have to pay',
                        'Not selected']
                   ),  # q0019_0004
                   'pays_initiator': (
@@ -542,7 +556,8 @@ class MetaData:
                   'boundaries_talked_with_friend': (
                       'Over the past 12 months, when it comes to sexual boundaries, have you done '
                       'Talked with a friend or friends about whether you pushed a partner too far.',
-                      ['Talked with a friend or friends about whether you pushed a partner too far.',
+                      ['Talked with a friend or friends about whether '
+                       'you pushed a partner too far.',
                        'Not selected']),  # q0021_0002
                   'boundaries_contacted_past_partner': (
                       'Over the past 12 months, when it comes to sexual boundaries, have you done '
